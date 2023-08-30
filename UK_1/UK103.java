@@ -1,7 +1,7 @@
 package UK_1;
 import java.util.Scanner;
 
-public class UK3 {
+public class UK103 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

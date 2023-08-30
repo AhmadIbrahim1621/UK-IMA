@@ -1,7 +1,7 @@
 package UK_1;
 import java.util.Scanner;
 
-public class UK2 {
+public class UK102 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,25 +14,21 @@ public class UK2 {
     }
     public static String tafsirPesan(String pesanEnkripsi) {
         String[] kataKode = pesanEnkripsi.split(" ");
-        String hurufVokal = "AIUEO";
         StringBuilder pesanTafsir = new StringBuilder();
-        String hurufKonsonan = "BCDFGHJKLMNPQRSTVWXYZ";
 
         for (String kata : kataKode) {
-            if (kata.length() < 2) {
+            if (kata.length() >= 4 && kata.endsWith("AR")) {
                 pesanTafsir.append(kata).append(" ");
                 continue;
             }
-            char hurufVokalPertama = kata.charAt(kata.length() - 2);
-            char hurufVokalKedua = kata.charAt(kata.length() - 1);
+            char hurufAR = kata.charAt(kata.length() - 3);
 
-            if (hurufVokal.indexOf(hurufVokalPertama, hurufVokalKedua) != -1 && hurufKonsonan.indexOf(hurufVokalKedua) != -1) {
+            if ("AEIOUaeiou".indexOf(hurufAR) != -1) {
                 pesanTafsir.append(kata.substring(0, kata.length() -2)).append(" ");
             } else {
                 pesanTafsir.append(kata).append(" ");
             }
         }
-
         return pesanTafsir.toString().trim();
     }
 }
