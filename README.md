@@ -1,3 +1,3 @@
 # UK-IMA
-# Ahmad Ibrahim Al Mubaroq
-# 6706213091
+Di buat oleh : Ahmad Ibrahim Al Mubaroq
+Nim : 6706213091
